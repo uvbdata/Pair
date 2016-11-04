@@ -1,26 +1,100 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6nM-Bp-LVL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Pair Randomizer-->
+        <scene sceneID="ImF-K4-veE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pair Randomizer" id="Azk-Kx-UmM" customClass="PairViewController" customModule="Pair" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="ZFm-wu-fbA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q3k-Dt-eOT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="hOo-pn-coG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zg8-Lq-g8J">
+                                <rect key="frame" x="0.0" y="64" width="375" height="549"/>
+                                <connections>
+                                    <segue destination="u1W-AA-7nK" kind="embed" id="bEa-05-gh1"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-zi-54k">
+                                <rect key="frame" x="149" y="621" width="76" height="30"/>
+                                <state key="normal" title="Randomize"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FZz-zi-54k" firstAttribute="top" secondItem="zg8-Lq-g8J" secondAttribute="bottom" constant="8" symbolic="YES" id="2I6-7B-qGa"/>
+                            <constraint firstItem="zg8-Lq-g8J" firstAttribute="top" secondItem="ZFm-wu-fbA" secondAttribute="bottom" id="701-13-T0n"/>
+                            <constraint firstItem="zg8-Lq-g8J" firstAttribute="leading" secondItem="hOo-pn-coG" secondAttribute="leading" id="F64-xV-V3y"/>
+                            <constraint firstItem="zg8-Lq-g8J" firstAttribute="centerX" secondItem="FZz-zi-54k" secondAttribute="centerX" id="LCM-VW-PYN"/>
+                            <constraint firstItem="Q3k-Dt-eOT" firstAttribute="top" secondItem="FZz-zi-54k" secondAttribute="bottom" constant="16" id="X0P-M4-aQ5"/>
+                            <constraint firstAttribute="trailing" secondItem="zg8-Lq-g8J" secondAttribute="trailing" id="iFx-pB-bd9"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Pair Randomizer" id="YJq-kv-wvR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4UK-kJ-KWm"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVs-aR-YFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="544.79999999999995" y="88.605697151424295"/>
+        </scene>
+        <!--Pair Table View Controller-->
+        <scene sceneID="kbB-8k-HIT">
+            <objects>
+                <tableViewController id="u1W-AA-7nK" customClass="PairTableViewController" customModule="Pair" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ypx-l3-p7t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="549"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pairCell" id="ScX-lE-twH" customClass="PairTableViewCell" customModule="Pair" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ScX-lE-twH" id="6lW-Uh-mc8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u1W-AA-7nK" id="7OH-xB-ulS"/>
+                            <outlet property="delegate" destination="u1W-AA-7nK" id="hjp-Nt-4Hb"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V08-R9-wg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Snw-qf-HKK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6nM-Bp-LVL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IUe-xK-3RH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Azk-Kx-UmM" kind="relationship" relationship="rootViewController" id="2pg-Qs-gbr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k96-KW-6Lr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394.39999999999998" y="88.605697151424295"/>
         </scene>
     </scenes>
 </document>

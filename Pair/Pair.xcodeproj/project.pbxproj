@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAA221D21DCCE3DB00046729 /* PairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D11DCCE3DB00046729 /* PairViewController.swift */; };
+		DAA221D41DCCE56200046729 /* PairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D31DCCE56200046729 /* PairTableViewController.swift */; };
+		DAA221D61DCCE5C600046729 /* PairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */; };
 		DAAC06581DCCDCC1002F5F6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC06571DCCDCC1002F5F6C /* AppDelegate.swift */; };
-		DAAC065A1DCCDCC1002F5F6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC06591DCCDCC1002F5F6C /* ViewController.swift */; };
 		DAAC065D1DCCDCC1002F5F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC065B1DCCDCC1002F5F6C /* Main.storyboard */; };
 		DAAC065F1DCCDCC1002F5F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC065E1DCCDCC1002F5F6C /* Assets.xcassets */; };
 		DAAC06621DCCDCC1002F5F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC06601DCCDCC1002F5F6C /* LaunchScreen.storyboard */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DAA221D11DCCE3DB00046729 /* PairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairViewController.swift; sourceTree = "<group>"; };
+		DAA221D31DCCE56200046729 /* PairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTableViewController.swift; sourceTree = "<group>"; };
+		DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTableViewCell.swift; sourceTree = "<group>"; };
 		DAAC06541DCCDCC1002F5F6C /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC06571DCCDCC1002F5F6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAAC06591DCCDCC1002F5F6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAAC065C1DCCDCC1002F5F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAAC065E1DCCDCC1002F5F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAAC06611DCCDCC1002F5F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,10 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				DAAC06571DCCDCC1002F5F6C /* AppDelegate.swift */,
-				DAAC06591DCCDCC1002F5F6C /* ViewController.swift */,
 				DAAC065B1DCCDCC1002F5F6C /* Main.storyboard */,
+				DAA221D31DCCE56200046729 /* PairTableViewController.swift */,
+				DAA221D11DCCE3DB00046729 /* PairViewController.swift */,
 				DAAC065E1DCCDCC1002F5F6C /* Assets.xcassets */,
 				DAAC06601DCCDCC1002F5F6C /* LaunchScreen.storyboard */,
+				DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */,
 				DAAC06631DCCDCC1002F5F6C /* Info.plist */,
 			);
 			path = Pair;
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAC065A1DCCDCC1002F5F6C /* ViewController.swift in Sources */,
+				DAA221D41DCCE56200046729 /* PairTableViewController.swift in Sources */,
+				DAA221D61DCCE5C600046729 /* PairTableViewCell.swift in Sources */,
+				DAA221D21DCCE3DB00046729 /* PairViewController.swift in Sources */,
 				DAAC06581DCCDCC1002F5F6C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +520,7 @@
 				DAAC067E1DCCDCC1002F5F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAC067F1DCCDCC1002F5F6C /* Build configuration list for PBXNativeTarget "PairTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +529,7 @@
 				DAAC06811DCCDCC1002F5F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAC06821DCCDCC1002F5F6C /* Build configuration list for PBXNativeTarget "PairUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +538,7 @@
 				DAAC06841DCCDCC1002F5F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
