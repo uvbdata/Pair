@@ -10,6 +10,12 @@
 		DAA221D21DCCE3DB00046729 /* PairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D11DCCE3DB00046729 /* PairViewController.swift */; };
 		DAA221D41DCCE56200046729 /* PairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D31DCCE56200046729 /* PairTableViewController.swift */; };
 		DAA221D61DCCE5C600046729 /* PairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */; };
+		DAA221E01DCCEA8700046729 /* Pair.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DAA221DE1DCCEA8700046729 /* Pair.xcdatamodeld */; };
+		DAA221EA1DCCF08700046729 /* PairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221E91DCCF08700046729 /* PairController.swift */; };
+		DAA221EC1DCCF1CB00046729 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221EB1DCCF1CB00046729 /* CoreDataStack.swift */; };
+		DAA221EE1DCD02D200046729 /* Member+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221ED1DCD02D200046729 /* Member+Convenience.swift */; };
+		DAA221F01DCD036600046729 /* Group+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221EF1DCD036600046729 /* Group+Convenience.swift */; };
+		DAA221F21DCD05E200046729 /* MemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA221F11DCD05E200046729 /* MemberController.swift */; };
 		DAAC06581DCCDCC1002F5F6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC06571DCCDCC1002F5F6C /* AppDelegate.swift */; };
 		DAAC065D1DCCDCC1002F5F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAC065B1DCCDCC1002F5F6C /* Main.storyboard */; };
 		DAAC065F1DCCDCC1002F5F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAAC065E1DCCDCC1002F5F6C /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 		DAA221D11DCCE3DB00046729 /* PairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairViewController.swift; sourceTree = "<group>"; };
 		DAA221D31DCCE56200046729 /* PairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTableViewController.swift; sourceTree = "<group>"; };
 		DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTableViewCell.swift; sourceTree = "<group>"; };
+		DAA221DF1DCCEA8700046729 /* Pair.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pair.xcdatamodel; sourceTree = "<group>"; };
+		DAA221E91DCCF08700046729 /* PairController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairController.swift; sourceTree = "<group>"; };
+		DAA221EB1DCCF1CB00046729 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DAA221ED1DCD02D200046729 /* Member+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Member+Convenience.swift"; sourceTree = "<group>"; };
+		DAA221EF1DCD036600046729 /* Group+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Group+Convenience.swift"; sourceTree = "<group>"; };
+		DAA221F11DCD05E200046729 /* MemberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberController.swift; sourceTree = "<group>"; };
 		DAAC06541DCCDCC1002F5F6C /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAC06571DCCDCC1002F5F6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAAC065C1DCCDCC1002F5F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +90,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAA221D71DCCE71900046729 /* Supported Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC065E1DCCDCC1002F5F6C /* Assets.xcassets */,
+				DAAC06601DCCDCC1002F5F6C /* LaunchScreen.storyboard */,
+				DAAC06631DCCDCC1002F5F6C /* Info.plist */,
+			);
+			name = "Supported Files";
+			sourceTree = "<group>";
+		};
+		DAA221D81DCCE73200046729 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221D31DCCE56200046729 /* PairTableViewController.swift */,
+				DAA221D11DCCE3DB00046729 /* PairViewController.swift */,
+				DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		DAA221D91DCCE74100046729 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221DE1DCCEA8700046729 /* Pair.xcdatamodeld */,
+				DAA221ED1DCD02D200046729 /* Member+Convenience.swift */,
+				DAA221EF1DCD036600046729 /* Group+Convenience.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DAA221DA1DCCE74800046729 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				DAA221E91DCCF08700046729 /* PairController.swift */,
+				DAA221F11DCD05E200046729 /* MemberController.swift */,
+				DAA221EB1DCCF1CB00046729 /* CoreDataStack.swift */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		DAA221DB1DCCE75300046729 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC065B1DCCDCC1002F5F6C /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		DAAC064B1DCCDCC1002F5F6C = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				DAAC06571DCCDCC1002F5F6C /* AppDelegate.swift */,
-				DAAC065B1DCCDCC1002F5F6C /* Main.storyboard */,
-				DAA221D31DCCE56200046729 /* PairTableViewController.swift */,
-				DAA221D11DCCE3DB00046729 /* PairViewController.swift */,
-				DAAC065E1DCCDCC1002F5F6C /* Assets.xcassets */,
-				DAAC06601DCCDCC1002F5F6C /* LaunchScreen.storyboard */,
-				DAA221D51DCCE5C600046729 /* PairTableViewCell.swift */,
-				DAAC06631DCCDCC1002F5F6C /* Info.plist */,
+				DAA221DB1DCCE75300046729 /* Views */,
+				DAA221DA1DCCE74800046729 /* ModelController */,
+				DAA221D91DCCE74100046729 /* Model */,
+				DAA221D81DCCE73200046729 /* ViewController */,
+				DAA221D71DCCE71900046729 /* Supported Files */,
 			);
 			path = Pair;
 			sourceTree = "<group>";
@@ -268,10 +326,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA221E01DCCEA8700046729 /* Pair.xcdatamodeld in Sources */,
 				DAA221D41DCCE56200046729 /* PairTableViewController.swift in Sources */,
 				DAA221D61DCCE5C600046729 /* PairTableViewCell.swift in Sources */,
 				DAA221D21DCCE3DB00046729 /* PairViewController.swift in Sources */,
+				DAA221EC1DCCF1CB00046729 /* CoreDataStack.swift in Sources */,
+				DAA221F01DCD036600046729 /* Group+Convenience.swift in Sources */,
 				DAAC06581DCCDCC1002F5F6C /* AppDelegate.swift in Sources */,
+				DAA221F21DCD05E200046729 /* MemberController.swift in Sources */,
+				DAA221EA1DCCF08700046729 /* PairController.swift in Sources */,
+				DAA221EE1DCD02D200046729 /* Member+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +605,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DAA221DE1DCCEA8700046729 /* Pair.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DAA221DF1DCCEA8700046729 /* Pair.xcdatamodel */,
+			);
+			currentVersion = DAA221DF1DCCEA8700046729 /* Pair.xcdatamodel */;
+			path = Pair.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DAAC064C1DCCDCC1002F5F6C /* Project object */;
 }

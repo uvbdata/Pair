@@ -9,6 +9,7 @@
 import UIKit
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        checkPreload()
+        
         return true
     }
 
@@ -40,7 +44,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    /// quick help
+    /** Check if empty Database when true call createMockup Data */
+    fileprivate func checkPreload() {
+        
+//        let pairRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
+//        
+//        guard let pairCount =
+//            CoreDataStack.context.count(for: pairRequest, error: &error)
+//            else { createMockup() }
+//        
+//        
+//        
+//        if pairCount? < 1 {
+//                createMockup()
+//        }
+        
+    }
+    
+    
+    /// quick help
+    /** Create Mockup Data for Pair Core Data Model*/
+    
+    fileprivate func createMockup() {
+    
+    // TODO: Integrate Mockup
+        
+    }
+        
+       
 
+    
 
 }
 
